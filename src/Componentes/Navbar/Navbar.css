@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+  padding: 0;
+  margin: 0;
+  justify-content:space-between;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+/* Estilo general del navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  background-color: white;
+  position: fixed; 
+  width: 100%;     
+  top: 0;
+  z-index: 1000;     
+}
+
+/*menu*/
+.menu{
+  font-weight: bold;
+  font-size: large;
+  margin-right: 60px;
+  cursor: pointer;
+  justify-content:space-between;
+  display: static;
+}
+
+/*logo*/
+.logo{
+  font-weight: 600;
+  font-size: larger;
+  display: flex;
+  margin-left: -50px;
+}
+
+/*busqueda en general*/
+.busqueda{
+  margin-left: 40px;
+  position: relative;
+}
+
+/*input buscar*/
+.buscar{
+  padding: 18px 30px;
+  gap: 10px;
+  width: 650px;
+  height: 5px;
+  background: #ffffff00;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15), 
+  0px 0.2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 100px;
+  border-color:#ffffff00;
+}
+
+.buscar:focus {
+  outline: none; /*contorno a todo el texto*/
+  /*a diferencia del borde, otuline encierra
+  todo el texto, son dibujados por encima del
+  elemento. A diferencia de los bordes, el contorno 
+  no está abierto en algunos lados:*/
+}
+
+.buscar, text{
+  color: #EB713A;
+}
+
+.buscar, ::placeholder{
+  color: rgb(142, 138, 138);
+  font-size: 16px;
+}
+
+.icono-buscar{
+  background: #EB713A;
+  border-radius: 100px;
+  color:#fff;
+  width: 65px;
+  height: 35px;
+  border: none;
+  padding: 6px;
+  cursor: pointer;
+  position: absolute;
+  right: -17px;
+  top: 48%;
+  transform: translateY(-50%);
+  font-size: larger;
+  
+}
+
+
+/* Contenedor del toggle switch con los iconos */
+.togglebutton {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Espacio entre el toggle y los iconos */
+}
+
+.icon-izq{
+  width: 24px;
+  height: 24px;
+  margin-left: 50px;
+}
+
+.icon-der {
+  width: 24px;
+  height: 24px;
+  margin-right: 50px;
+}
+
+/* Contenedor del switch */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Cuando está activo (checado del lado derecho comida)  */
+.switch input:checked + .slider {
+  background-color: #ffffff;
+}
+
+.switch input:checked + .slider:before {
+  transform: translateX(26px);
+  background-color: #3E5F41;
+}
+
+/* Estilo del slider cuando cambie a coctel */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #dde3d5;
+  transition: 0.4s;
+  border-radius: 34px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: #2f4f4f;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+/*botones*/
+.botones-IniciarRegistra{
+  display: grid;
+  gap: 100px;
+}
+
+/*boton registro*/
+.registrar{
+  border-radius: 50px;
+  width: 115px;
+  height: 45px;
+  margin-right: 20px;
+  background: none;
+  /*border-color: #A50717;*/
+  border: solid #A50717;
+  font-weight: 600;
+  cursor: pointer;
+  color: black;
+  font-size: 14px;
+}
+
+/*boton iniciar sesion*/
+.iniciarSesion{
+  border-radius: 50px;
+  width: 140px;
+  height: 45px;
+  margin-right: 20px;
+  background: #A50717;
+  /*border-color: #A50717;*/
+  border: none;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .button-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .button {
+    width: 100%; /* Para que los botones ocupen todo el ancho disponible */
+  }
+}

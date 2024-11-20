@@ -1,0 +1,21 @@
+.carousel-container {
+    position: relative;
+    width: auto;
+    height: auto;
+    overflow: hidden;
+  }
+  
+  .carousel-image {
+    position: absolute;
+    top: 18%;
+    left: 68%;
+    width: 380px;
+    height: 380px;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  .carousel-image.active {
+    opacity: 1;
+  }
+  
