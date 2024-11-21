@@ -28,23 +28,27 @@ const Registro = () => {
                     </div>
                     <p className='text-r'>Registrate con un e-mail y nombre de usuario</p>
                     <form>
-                        <input type="text"  className="inputs-normal" placeholder="Nombre de usuario"/>
-                        <input type="email" className="inputs-normal" placeholder="E-mail"/>
-                        {/*<input type="password" placeholder="Contraseña" />*/}
-                        <div className="password-container">
-                            <input
-                                type={passwordVisible ? 'text' : 'password'}
-                                className="password-input"
-                                placeholder="Contraseña"
-                            />
-                            <img
-                                src={passwordVisible ? Ojoabierto : Ojocerrado}
-                                alt="Toggle Password Visibility"
-                                className="password-icon"
-                                onClick={Visibilidaad}
-                            />
+                        <div className="form-input">
+                            <input type="text"  className="inputs-normal" placeholder="Nombre de usuario"/>
+                            <input type="email" className="inputs-normal" placeholder="E-mail"/>
+                            <div className="password-container">
+                                <input
+                                    type={passwordVisible ? 'text' : 'password'}
+                                    className="password-input"
+                                    placeholder="Contraseña"
+                                />
+                                <img
+                                    src={passwordVisible ? Ojoabierto : Ojocerrado}
+                                    alt="Toggle Password Visibility"
+                                    className="password-icon"
+                                    onClick={Visibilidaad}
+                                />
+                            </div>
                         </div>
-                        <button type="submit" className="boton-prim">Registrarse</button>
+                        
+                        <div className="botonreg">
+                            <button type="submit" className="boton-prim">Registrarse</button>
+                        </div>
                     </form>
                 </div>
 
@@ -52,7 +56,7 @@ const Registro = () => {
                     <div className="texto-in">
                         <h2 className='titulo'>¡Hola!</h2>
                         <p className='p1'>Sé parte de esta comunidad llena de chefcitos que cocinan con amor</p>
-                        <p>Inicia sesión si ya eres parte de la comunidad</p>
+                        <p className='p2'>Inicia sesión si ya eres parte de la comunidad</p>
                         <button className="boton-sec">iniciar sesión</button>
                     </div>
                 </div>
