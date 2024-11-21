@@ -2,7 +2,7 @@ import React from 'react'
 import { Navbar } from './Componentes/Navbar/Navbar'
 import Hero from './Componentes/Hero/Hero'
 import Registro from './Componentes/incio-registro/Registro'
-import inicio from './Componentes/incio-registro/inicio'
+import Inicio from './Componentes/incio-registro/Inicio'
 
 const App = () => {
   return (
@@ -10,10 +10,9 @@ const App = () => {
       {/*<Hero/>
       <Navbar/>*/}
       {/*<Registro/>*/}
-      <Registro>
 
-      </Registro>
-      
+      {<Inicio/>}
+     
     </div>
   )
 }
