@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import { useNavigate } from 'react-router-dom';
 import './registro.css';
 import Ifacebook from '/src/assets/facebook.png';
 import Igoogle from '/src/assets/google.png';
@@ -8,9 +9,18 @@ import Ojocerrado from '/src/assets/cerrar-ojo.png';
 
 const Registro = () => {
     const [passwordVisible, setPasswordVisible] = useState(false);
+    const navigate = useNavigate(); // Hook de navegación
 
     const Visibilidaad = () => {
         setPasswordVisible(!passwordVisible);
+    };
+
+    const handleInicioClick = () => {
+        navigate('/inicio'); //  ruta de registro
+    };
+
+    const handleRegistroClick = () => {
+    navigate('/'); //  ruta de registro
     };
 
     return (
@@ -47,7 +57,7 @@ const Registro = () => {
                         </div>
                         
                         <div className="botonreg">
-                            <button type="submit" className="boton-prim">Registrarse</button>
+                            <button type="submit" className="boton-prim" onClick={handleRegistroClick}>Registrarse</button>
                         </div>
                     </form>
                 </div>
@@ -57,7 +67,7 @@ const Registro = () => {
                         <h2 className='titulo'>¡Hola!</h2>
                         <p className='p1'>Sé parte de esta comunidad llena de chefcitos que cocinan con amor</p>
                         <p className='p2'>Inicia sesión si ya eres parte de la comunidad</p>
-                        <button className="boton-sec">iniciar sesión</button>
+                        <button className="boton-sec" onClick={handleInicioClick}>iniciar sesión</button>
                     </div>
                 </div>
             </div>

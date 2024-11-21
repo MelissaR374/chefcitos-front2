@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import './Navbar.css';
 import IconoHam from '/src/assets/hamburguesa.png';
 import IconoCoct from '/src/assets/copa-de-martini-citricos.png';
+import { Link } from 'react-router-dom';
 
 export const Navbar = () => {
   const [placeholderIndex, setPlaceholderIndex] = useState(0);
@@ -49,8 +50,12 @@ export const Navbar = () => {
       </div>
     
       <div className="botones-IniciaRegistra">
+        <Link to="/registro">
           <button className="registrar">Resgistrarse</button>
+        </Link>
+        <Link to="/inicio">
           <button className="iniciarSesion">Iniciar Sesión</button>
+        </Link>
       </div>
       
 

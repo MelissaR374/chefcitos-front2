@@ -1,16 +1,25 @@
 import React, {useState} from 'react';
+import { useNavigate } from 'react-router-dom';
 import './inicio.css';
 import Ifacebook from '/src/assets/facebook.png';
 import Igoogle from '/src/assets/google.png';
 import Ojoabierto from '/src/assets/vista.png';
 import Ojocerrado from '/src/assets/cerrar-ojo.png';
 
-
 const inicio = () => {
   const [passwordVisible, setPasswordVisible] = useState(false);
+  const navigate = useNavigate(); // Hook de navegación
 
   const Visibilidaad = () => {
     setPasswordVisible(!passwordVisible);
+  };
+
+  const handleRegistroClick = () => {
+    navigate('/registro'); //  ruta de registro
+  };
+
+  const handleInicioClick = () => {
+    navigate('/'); //  ruta de registro
   };
 
   return (
@@ -21,7 +30,7 @@ const inicio = () => {
             <h2 className='titulo'>¡Bienvenido!</h2>
             <p className='p1in'>Gracias por ser parte de esta comunidad llena de sabor</p>
             <p className='p2in'>Regístrate para ser parte de nosotros</p>
-            <button className="boton-prima">Registrarse</button>
+            <button className="boton-prima" onClick={handleRegistroClick}>Registrarse</button>
           </div>
         </div>
 
@@ -55,7 +64,7 @@ const inicio = () => {
             </div>
             
             <div className="botoniniS">
-              <button type="submit" className="boton-secu">Iniciar Sesión</button>
+              <button type="submit" className="boton-secu" onClick={handleInicioClick}>Iniciar Sesión</button>
             </div>
           </form>
           
@@ -67,4 +76,4 @@ const inicio = () => {
   );
 };
 
-export default inicio
+export default inicio;
