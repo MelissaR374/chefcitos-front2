@@ -1,0 +1,711 @@
+.recipe-form {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 20px;
+    padding: 5px 10px;
+    /* padding: 10px; */
+    margin-top: 55px; 
+
+    justify-content: center;
+    padding-bottom: 30px;
+    padding-top: 50px;
+    margin: 0 auto;
+
+}
+ 
+
+/*AREA DE IMAGENES Y LINK*/
+.imag-section {
+    flex: 1;
+    grid-gap: 10px;
+    height: auto;
+    width: 2000px;
+    padding: 5px 20px;
+
+    grid-template-rows: auto 300px auto;
+    height: 100vh;
+
+
+}
+
+.imagenes-tit{
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+
+.imagenes-tit h1{
+    color: black;
+    font-weight: 600;
+    font-size: 28px;
+}
+
+.imag-grid {
+    display: grid;
+    /*    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Se adapta automáticamente */
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 20px;
+    background-color: #D9D9D9;
+    padding: 20px;
+    border-radius: 20px;
+    /* width: 100%; */
+}
+
+  
+.imag-placeholder {
+    width: 270px;
+    /* width: 100%; */
+    height: 200px;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    font-size: 24px;
+    color: #999;
+}
+
+.icon-cam{
+    width: 60px;
+    height: 60px;
+    /*align-items: center;*/
+    /* Arriba | Derecha | Abajo | Izquierda */
+    margin: 0 10px 0 0; 
+
+}
+
+
+/*INPUT ENLACE MULTIMEDIA*/
+.Enlace-multimedia {
+    margin-top: 20px;
+    padding-bottom: 20px;
+
+}
+
+.text-link{
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.text-link p{
+    font-size: 13.5px;
+    font-weight: 300;
+}
+
+.input-link {
+    display: flex;
+    /* flex-direction: column; */
+    gap: 10px; 
+}
+  
+.input-link input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+
+    width: 70%;
+    
+    box-shadow: 0px 5px 3px rgba(0, 0, 0, 0.15), 
+    0px 0.2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    border-color:#ffffff00;
+    outline: none;
+}
+  
+.agregar-link {
+    /* width: 125px; */
+    width: 25%;
+    background-color: #FBE083;
+    border: none;
+    color: black;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 15px;
+    cursor: pointer;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15), 
+    0px 0.2px 10px rgba(0, 0, 0, 0.1);
+}
+  
+
+/*CONTENIDO DESCRIPCIÓN TODO*/
+.descripcion-section {
+    flex: 2;
+    background: #D9D9D9;
+    padding: 20px;
+    border-radius: 8px;
+    /* Arriba | Derecha | Abajo | Izquierda */
+    margin: -20px -3px -30px -10px;
+
+    /* overflow-y: auto; */
+    width: 200px;
+    padding-left: 30px;
+
+}
+
+/*inputs de nombre, descripción y pasos*/
+.input-titulo,
+.input-descripcion,
+.input-paso {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 9px;
+    outline: none;
+}
+
+/*TITULO DESCRIPCIÓN*/
+.descrip-tit{
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.descrip-tit h3{
+    color: black;
+    font-weight: 600;
+    font-size: 28px;
+}
+
+
+/*TITULO DE "NOMBRE DE RECETA"
+E input de ese div*/
+.nombretit-input{
+    margin-bottom: 5px;
+}
+
+.nombretit-input h4{
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.inpunom{
+    margin-bottom: 5px;
+}
+
+/*TITULO DE "BREVE DESCRIPCIÓN"
+E input de ese div*/
+.desctit-input{
+    margin-bottom: 8px;
+}
+
+.desctit-input h4{
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.inpudesc{
+    margin-bottom: 10px;
+}
+
+/*textarea*/
+.input-descripcion{
+    height: 130px;
+    resize: none;
+    font-size: 12px;
+}
+
+/*INGREDIENTES*/
+/*ORGANIZACIÓN DE CADA INGREDIENTE*/
+.ingredientit-input{
+    margin-bottom: 10px;
+}
+
+.ingredientit-input h4{
+    font-weight: 400;
+    font-size: 18px;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.ingredient-arti {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10px;
+    margin-bottom: 10px;
+    
+}
+
+.input-ingrediente{
+    /* flex: 1; 
+    text-align: center;
+    max-width: 150px; */
+
+    outline: none;
+    border: none;
+    text-align: center;
+    border-radius: 8px;
+    margin-right: 10px;
+}
+
+.quantity-button,
+.quantity-input {
+    flex: 1; /* Tamaño más uniforme */
+    text-align: center;
+    max-width: 50px;
+}
+
+.quantity-button{
+    width: 50px;
+    font-weight: bold;
+    border: none;
+    background-color: #f8d558;
+    margin-left: -100px;
+    margin-right: -80px;
+}
+
+/*Unidades gr/kilos/litros/etc...*/
+.quantity-input{
+    width: 50px;
+    height: 40px;
+    text-align: center;
+    margin: 3px 0 0 0;
+    border: none;
+    border-radius: 7px;
+    /* background-color: #D9D9D9; */
+    outline: none;
+    margin-left: -10px;
+    margin-right: -90px;
+
+}
+
+.contpadre-uni{
+    max-width: 1200px;
+}
+
+.unidades {
+        /* Arriba | Derecha | Abajo | Izquierda */
+    margin: 3px 0 0 0;
+    display: flex;
+    /* left: 50px; */
+    width: 90px;
+    height: 40px;
+    text-align: center;
+    border: none;
+    border-radius: 7px;
+    /* margin-left: -128px; */
+    outline: none;
+    margin-right: 10px;
+    flex: 1;
+ 
+
+}
+
+.unidades::placeholder  {
+    text-align: center;
+   
+}
+
+.cant-u{
+    margin-top: 10px;
+}
+
+/*BOTON BORRAR*/
+.delete-button {
+    /* flex: 0 0 45px; 
+    display: flex;
+    justify-content: center;
+    align-items: center; */
+
+
+    margin-right: 250px;
+    background-color: rgb(172, 4, 4);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 45px;
+    height: 45px;
+}
+
+.icon-basura{
+    width: 20px;
+    height: 20px;
+    align-items: center;
+    margin-top: 5px;
+}
+  
+.delete-button:hover {
+    background-color: rgb(195, 48, 48);
+}
+
+/*BOTON AGREGAR INGREDIENTES*/
+.addbutton-ing{
+    font-size: 30px;
+    text-align: center;
+    border-radius: 10px;
+    width: 165px;
+    height: 50px;
+    color: white;
+    border: none;
+    margin-bottom: 20px;
+}
+
+/*PASOS*/
+.pasostit-input{
+    margin-bottom: 7px;
+}
+
+.pasostit-input h4{
+    font-weight: 400;
+    font-size: 18px;font-weight: 400;
+    font-size: 18px;
+}
+
+.paso-paso {
+    display: flex; 
+    flex-direction: column; 
+    margin-bottom: 10px; 
+
+}
+
+/*titulo de cada paso enumerado*/
+.pasobyp{
+    color: #9c023f;
+    margin-left: 1px;
+    margin-bottom: 2px;
+    font-weight: bold
+}
+
+/*textarea*/
+.input-paso{
+    width: 680px;
+    resize: none;
+    font-size: 12px;
+    flex: 1;
+    margin-right: 10px;
+}
+
+.delete-buttonstep{
+    background-color: rgb(172, 4, 4);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 45px;
+    height: 45px;
+
+    margin-right: 5px;
+    margin-top: -60px;
+    align-self: flex-end;
+}
+
+.icon-basura{
+    width: 20px;
+    height: 20px;
+    align-items: center;
+    margin-top: 5px;
+}
+  
+.delete-buttonstep:hover {
+    background-color: rgb(195, 48, 48);
+}
+
+.addbutton-step{
+    font-size: 30px;
+    text-align: center;
+    border-radius: 10px;
+    width: 165px;
+    height: 50px;
+    color: white;
+    border: none;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+/*DIFICULTAD*/  
+.dificultit-input{
+    margin-bottom: 2px;
+}
+
+.dificultit-input h4{
+    font-weight: 400;
+    font-size: 18px;font-weight: 400;
+    font-size: 18px;
+}
+
+
+.difficultad {
+    margin-top: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    width: 100px;
+}
+
+
+/*BOTON GUARDAR FINAL*/
+.boton-guardar {
+    background: #9DDFA3;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;margin-bottom: 10px;
+    float: right;
+    /* width: 100%; */
+}
+
+/* MEDIA QUERIES PARA DIFERENTES TAMAÑOS */
+@media screen and (max-width: 1024px) {
+    .recipe-form {
+        display: flex;
+        flex-direction: column; /* Cambia a diseño en columna en pantallas medianas */
+    }
+
+    .imag-section {
+        width: 100%; /* Asegura que ocupe todo el ancho */
+        margin-bottom: 20px; /* Espaciado entre imag-section y descripcion-section */
+    }
+
+    .imag-grid{
+        width: 650px;
+    }
+
+    .descripcion-section {
+        width: 100%; /* También ocupa todo el ancho */
+    }
+    .delete-buttonstep{
+        margin-right: 210px;
+     }
+}
+
+@media screen and (max-width: 768px) {
+    .recipe-form {
+        flex-direction: column; /* Cambia la dirección a columna */
+        align-items: center;
+    }
+
+  
+    .imag-grid {
+        grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+        width: 315px;
+        
+    }
+
+    .Enlace-multimedia {
+        margin-top: 20px;
+        padding-bottom: 40px;
+    
+    }
+
+    .input-link input {
+        width: 100%; /* Input ocupa el 100% */
+    }
+
+    .agregar-link {
+        width: 100%; /* Botón bajo el input */
+    }
+
+    .descripcion-section {
+        width: 100%;
+    }
+
+    .ingredient-arti {
+        flex-wrap: wrap; /* Permite que los elementos bajen de línea si no caben */
+        gap: 5px; /* Reduce el espacio */
+    }
+
+    .quantity-button,
+    .quantity-input,
+    .unidades,
+    .delete-button {
+        flex: 1 1 100%; /* Cada elemento ocupa una línea en pantallas pequeñas */
+        text-align: center;
+    }
+
+    
+
+}
+
+
+
+@media screen and (max-width: 576px) {
+    .delete-buttonstep, .addbutton-step, .boton-guardar {
+        width: 100%; /* Botones más grandes y centrados */
+    }
+
+    .descripcion-section{
+        margin-top: 10px;
+    }
+
+    .ingredient-arti {
+        flex-direction: row; /* Ajusta los ingredientes en una columna */
+    }
+
+    .contpadre-uni{
+        width: 106px;
+    }
+ 
+    .quantity-button, .quantity-input {
+        width: 100%; /* Inputs de cantidades adaptables */
+        margin: 5px 0;
+    }
+
+    .unidades {
+        width: 100%;
+    }
+
+    .input-paso{
+        width: 450px;
+        resize: none;
+        font-size: 12px;
+        flex: 1;
+        margin-right: 10px;
+    }
+
+    .delete-buttonstep{    
+        margin-right: 5px;
+        margin-top: -60px;
+        align-self: flex-end;
+    }
+    
+    .icon-basura{
+        width: 20px;
+        height: 20px;
+        align-items: center;
+        margin-top: 5px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .recipe-form {
+        flex-direction: column; /* Cambia a diseño en columna */
+        gap: 15px; /* Espaciado más compacto */
+        padding: 10px;
+        margin-top: 20px;
+    }
+
+    .imag-section {
+        width: 100%; /* Se adapta al ancho del contenedor */
+        padding: 5px;
+        margin-bottom: 15px; /* Espaciado entre secciones */
+    }
+
+    .imagenes-tit h1 {
+        font-size: 24px; /* Reduce ligeramente el tamaño del texto */
+    }
+
+    .imag-grid {
+        grid-template-columns: 1fr; /* Una sola columna para imágenes */
+        gap: 10px; /* Espacio reducido entre elementos */
+        padding: 10px;
+    }
+
+    .imag-placeholder {
+        width: 100%;
+        height: 180px; /* Ajuste del tamaño de las imágenes */
+        font-size: 16px; /* Texto más pequeño */
+    }
+
+    .Enlace-multimedia {
+        margin-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .input-link {
+        flex-direction: column; /* Inputs en columna */
+    }
+
+    .input-link input,
+    .agregar-link {
+        width: 100%; /* Ocupan todo el ancho */
+    }
+
+    .descripcion-section {
+        width: 100%;
+        padding: 10px;
+        margin: 0 auto;
+    }
+
+    .descrip-tit h3 {
+        font-size: 24px; /* Tamaño del título ajustado */
+    }
+
+    .input-descripcion,
+    .input-paso {
+        font-size: 14px; /* Tamaño de texto más pequeño */
+        height: 120px; /* Ajuste de altura */
+    }
+
+    .ingredient-arti {
+        flex-wrap: wrap; /* Ingredientes pueden saltar de línea */
+        gap: 10px;
+    }
+
+    
+    .quantity-input,
+    .unidades {
+        width: 100%; 
+        text-align: center;
+        margin-bottom: 10px;
+        margin-left: 5px;
+    }
+
+    
+
+    .quantity-button{
+        margin-right: 90px;
+    }
+
+    .delete-button,
+    .addbutton-ing,
+    .addbutton-step,
+    .boton-guardar {
+        width: 100%; /* Botones adaptados al ancho */
+    }
+
+    .paso-paso {
+        flex-direction: column;
+        margin-bottom: 15px; /* Espaciado entre pasos */
+    }
+
+    .pasobyp {
+        font-size: 14px; /* Ajuste del tamaño de los pasos */
+        margin-bottom: 5px;
+    }
+
+    .input-paso{
+        width: 350px;
+    }
+
+    .delete-buttonstep {
+        align-self: flex-end;
+        margin-top: -3px;
+        margin-right: -2px;
+    }
+
+    .icon-basura {
+        width: 18px; /* Iconos ajustados */
+        height: 18px;
+    }
+
+    .addbutton-step {
+        font-size: 16px; /* Tamaño del texto ajustado */
+        
+    }
+
+    .boton-guardar{
+        padding: 0;
+        margin-right: 0;
+    }
+}
+
+
+
+
+
+
+
+
+ 
+
+/*Arriba | Horizontal | Abajo 
+margin: 1em auto 2em;*/
+
+
+
+
+  

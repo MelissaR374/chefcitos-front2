@@ -4,7 +4,7 @@ import IconoHam from '/src/assets/hamburguesa.png';
 import IconoCoct from '/src/assets/copa-de-martini-citricos.png';
 import { Link } from 'react-router-dom';
 
-export const Navbar = () => {
+const Navbar = () => {
   const [placeholderIndex, setPlaceholderIndex] = useState(0);
   const [isChecked, setIsChecked] = useState(true);
   const placeholders = [
@@ -31,7 +31,7 @@ export const Navbar = () => {
       <div className='menu'>
         <i class="fi fi-br-menu-burger"></i>
       </div>
-      <div className='logo'> Chefcitos</div>
+      <div className='logo'>Chefcitos</div>
 
       <div className="busqueda">
         <input className='buscar' type="text" placeholder={placeholders[placeholderIndex]}/>
@@ -64,4 +64,4 @@ export const Navbar = () => {
   );
 };
 
-export default Navbar
+export default Navbar;

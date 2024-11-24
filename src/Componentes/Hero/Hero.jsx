@@ -15,7 +15,7 @@ const Hero = () => {
         </div>
         <Carruselimg />
     </div>
-  )
-}
+  );
+};
 
-export default Hero
+export default Hero;
