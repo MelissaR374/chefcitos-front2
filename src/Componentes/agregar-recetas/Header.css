@@ -100,7 +100,7 @@
 /*modificador de todo lo que lo contiene
 da formato a la información para que esté 
 alineada a la izquierda*/
-.container{
+.contenedor{
     border-radius: 0%;
     box-shadow: none;
     float: left;

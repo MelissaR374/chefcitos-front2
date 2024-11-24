@@ -4,16 +4,17 @@ import Navbar  from './Componentes/Navbar/Navbar'
 import Hero from './Componentes/Hero/Hero'
 import Registro from './Componentes/incio-registro/Registro'
 import Inicio from './Componentes/incio-registro/inicio'
-import Header from './Componentes/agregar-recetas/Header'
 import RecipeForm from './Componentes/agregar-recetas/RecipeForm'
-import RecipeForm2 from './Componentes/agregar-recetas/RecipeForm'
 
 
 const Layout = ({ children }) => {
   const location = useLocation();
 
   // Oculta el Navbar en la ruta de inicio de sesión y registro
-  const hideNavbar = location.pathname === "/inicio" || location.pathname === "/registro";
+  const hideNavbar =
+    location.pathname === "/inicio" ||
+    location.pathname === "/registro" ||
+    location.pathname === "/agregar-receta";
 
   return (
     <>
@@ -25,10 +26,18 @@ const Layout = ({ children }) => {
 
 const App = () => {
   return (
-   <>
-    <Header></Header>
-    <RecipeForm/>
-   </>
+    <Router>
+      <Layout>
+        <Routes>
+          <Route path="/" element={<Hero />}/>
+          <Route path="/registro" element={<Registro />}/>
+          <Route path="/inicio" element={<Inicio />}/>
+          <Route path="/agregar-receta" element={<RecipeForm />} />
+        </Routes>
+      </Layout>
+    </Router>
+    
+ 
   
   );
 };

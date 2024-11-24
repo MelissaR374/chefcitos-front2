@@ -27,7 +27,7 @@ const Header = () => {
             <br />
 
             <div className="outer-container">
-                <div className="container">
+                <div className="contenedor">
                     <div className="categories">
                         <ul>
                             <li className="active">Categoría</li>
