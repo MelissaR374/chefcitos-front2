@@ -321,7 +321,7 @@ const RecipeForm = () => {
                     type="button"
                     onClick={() => deleteStep(index)} // Función para eliminar
                     className="delete-buttonstep">
-                    <img src={basura} alt="Ibasura" className="icon-basura" />
+                    <img src={basura} alt="Ibasura" className="icon-basurastep" />
                   </button>
                 </div>
               ))}
