@@ -15,7 +15,12 @@ const RecipeForm = () => {
 
   // Manejo de imágenes
   const addImagePlaceholder = () => {
-    setImages([...images, "+"]); // Agrega un nuevo placeholder
+    setImages([...images, ""]); // Agrega un nuevo placeholder
+  };
+
+  const removeImage = (index) => {
+    const updatedImages = images.filter((_, i) => i !== index);
+    setImages(updatedImages); // Elimina el placeholder específico
   };
 
   // Manejo de ingredientes
@@ -113,25 +118,30 @@ const RecipeForm = () => {
             <p>Sube tu imagen haciendo click aquí</p>
           </div> */}
           <div className="imag-grid">
-            <button className="imag-placeholder">
-              <img src={camara} alt="Icam" className="icon-cam" />
-            </button>
-            <button className="imag-placeholder">
-              {/* <img src={camara} alt="Icam" className="icon-cam" /> */}
-            </button>
-            <button className="imag-placeholder">
-              {/* <img src={camara} alt="Icam" className="icon-cam" /> */}
-
-            </button>
             {images.map((image, index) => (
-              <button
-                key={index}
-                className="imag-placeholder"
-                onClick={addImagePlaceholder}
-              >
-                {image}
-              </button>
+                <button key={index} className="imag-placeholder">
+                  <img src={camara} alt="Icam" className="icon-cam" />
+                  <button
+                  type="button"
+                  className="delete-buttonimg"
+                  onClick={() => removeImage(index)}>
+                    <img src={basura} alt="Eliminar" className="icon-basuraimg" />
+                  </button>
+                </button>
+                
             ))}
+            
+            
+
+            
+            
+            <button
+              className="imag-placeholder"
+              onClick={addImagePlaceholder}
+            >
+              +
+            </button>
+            
           </div>
           
           {/* Link */}
