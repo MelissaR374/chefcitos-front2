@@ -1,0 +1,22 @@
+.recipe-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+    gap: 10px;
+    grid-row-gap: 50px;
+    padding: 20px;
+    padding-left: 80px;
+    padding-bottom: 50px;
+}
+
+.favorite-button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+.favorite-button:hover {
+    color: #f2cb4b;
+}
+  
