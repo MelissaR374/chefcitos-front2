@@ -35,28 +35,7 @@ const Header = () => {
                 <Link to="/">
                     <h1 className='logo'>Chefcitos</h1>
                 </Link>
-                <nav className={`sidebar ${menuOpen ? 'open' : ''}`}>
-                    <img src={barras} alt="Barras" className='icon-barras-menu'onClick={toggleMenu}/>
-                    <ul>
-                        <li>
-                            <Link to="/recetas-favoritas"><button className="fav"><img src={corazonfav} alt="Fav" className='icon-corazonfav' />Favoritos</button></Link>
-                        </li>
-                        <li>
-                            <Link to="/perfil"><button className="perfil"><img src={raton} alt="Perfil" className='icon-raton' />Perfil</button></Link>
-                        </li>
-                        <li>
-                            <Link to="/recetas-creadas"><button className="mine"><img src={libro} alt="Misrecetas" className='icon-recetario' />Mis recetas</button></Link>
-                        </li>
-                    
-                    </ul>
-                    <Link to="/agregar-receta">
-                    <button className="add-recipe"><img src={add} alt="add" className='icon-agregar' />Añadir receta</button>
-                    </Link>
-                    
-                    <button className="login"><img src={entrar} alt="entrar" className='icon-entrar'/>Iniciar sesión</button>
-                </nav>
-                {/* Fondo oscuro al abrir el menú */}
-                {menuOpen && <div className="overlay" onClick={toggleMenu}></div>}
+                
             </div>
 
             <div className="header-right">
@@ -91,6 +70,34 @@ const Header = () => {
                 </div>
                  
             </div>
+
+            <nav className={`sidebar ${menuOpen ? 'open' : ''}`}>
+                    <img src={barras} alt="Barras" className='icon-barras-menu'onClick={toggleMenu}/>
+                    <ul>
+                        <li>
+                            <Link to="/recetas-favoritas"><button className="fav"><img src={corazonfav} alt="Fav" className='icon-corazonfav' />Favoritos</button></Link>
+                        </li>
+                        <li>
+                            <Link to="/perfil"><button className="perfil"><img src={raton} alt="Perfil" className='icon-raton' />Perfil</button></Link>
+                        </li>
+                        <li>
+                            <Link to="/recetas-creadas"><button className="mine"><img src={libro} alt="Misrecetas" className='icon-recetario' />Mis recetas</button></Link>
+                        </li>
+                    
+                    </ul>
+                    <Link to="/agregar-receta">
+                    <button className="add-recipe"><img src={add} alt="add" className='icon-agregar' />Añadir receta</button>
+                    </Link>
+                    
+                    <button className="login"><img src={entrar} alt="entrar" className='icon-entrar'/>Iniciar sesión</button>
+            </nav>
+            {/* Fondo oscuro al abrir el menú */}
+            {menuOpen && <div className="overlay" onClick={toggleMenu}></div>}
+
+
+
+
+
         </div>
     );
 };
