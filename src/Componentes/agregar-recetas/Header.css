@@ -1,3 +1,7 @@
+body{
+    position: relative;
+    z-index: 1;
+}
 
 .header{
     align-items: center;
@@ -7,7 +11,7 @@
     width: 100%;
     margin-top: 25px;
     margin-bottom: 15px;
-    z-index: 1000;
+    z-index: 800;
     padding-top: 24px;
     height: 70px;
     position: sticky;
@@ -46,6 +50,202 @@
     justify-content:space-between;
     background-color: white;
 }
+
+.menu-icon{
+    font-weight: bold;
+    font-size: large;
+    margin-right: 60px;
+    cursor: pointer;
+    justify-content:space-between;
+    display: static;
+}
+  
+.icon-barras-menu{
+    width: 20px;
+    height: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    transition: left 0.3s ease-in-out;
+    z-index: 1501; /* Asegúrate de que tenga un z-index superior a todos */
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+  
+.sidebar.open {
+    left: 0;
+}
+  
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 300px;
+}
+  
+.sidebar ul li {
+    margin: 1rem 0;
+}
+  
+.sidebar ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    font-weight: 500;
+}
+  
+/* .add-recipe,
+.login {
+    margin-top: auto;
+    padding: 10px;
+    border: none;
+    background-color: #a50717;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+} */
+  
+.login{
+    border: none;
+    background-color: transparent;
+    color: black;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    gap: 10px; 
+    margin-bottom: 2rem;
+}
+  
+.icon-entrar{
+    width: 25px;
+    height: 25px;
+    margin-left: -25px;
+}
+  
+/*cuando inicie sesión, estará el
+icono de cerrar sesión, este*/
+.icon-salir{
+    width: 25px;
+    height: 25px;
+    margin-left: -25px;
+}
+
+.add-recipe {
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    background-color: #3E5F41;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    gap: 10px; 
+    margin-bottom: 1rem;
+}
+  
+.icon-agregar{
+    width: 25px;
+    height: 25px;
+    margin-left: -20px;
+}
+  
+/* Fondo oscuro al abrir el menú */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    z-index: 1400;
+}
+  
+.fav{
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    border-radius: 100px;
+    background-color: #f8c471;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    gap: 10px; 
+  
+}
+  
+.icon-corazonfav{
+    width: 20px;
+    height: 20px;
+    
+}
+  
+.perfil{
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    border-radius: 100px;
+    background-color: #992e39;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    gap: 10px; 
+}
+  
+.icon-raton{
+    width: 20px;
+    height: 20px;
+    margin-left: -30px;
+    
+}
+  
+.mine{
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    border-radius: 100px;
+    background-color: #EB713A;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    gap: 10px;
+}
+  
+.icon-recetario{
+    width: 20px;
+    height: 20px;
+    margin-left: 15px;
+}
+  
 
 .header-right{
     display: flex;
@@ -88,7 +288,7 @@
     border-width: thin;
     overflow: hidden;
     border-bottom: 1px solid #8F8585;
-    position: sticky;
+    position: relative;
     top: 0; /* Asegúrate de que sea igual a la altura del encabezado superior */
     margin: 0;
     margin-top: 15px;
