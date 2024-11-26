@@ -54,9 +54,9 @@ const Navbar = () => {
           <li>
             <Link to="/recetas-favoritas"><button className="fav"><img src={corazonfav} alt="Fav" className='icon-corazonfav' />Favoritos</button></Link>
           </li>
-          <li>
+          {/* <li>
             <Link to="/perfil"><button className="perfil"><img src={raton} alt="Perfil" className='icon-raton' />Perfil</button></Link>
-          </li>
+          </li> */}
           <li>
             <Link to="/recetas-creadas"><button className="mine"><img src={libro} alt="Misrecetas" className='icon-recetario' />Mis recetas</button></Link>
           </li>
