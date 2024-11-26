@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './Header.css';
 import cubiertos from '/src/assets/cubiertos.png';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
     const [selectedCategory, setSelectedCategory] = useState(null); // Estado para la categoría seleccionada
@@ -17,7 +18,9 @@ const Header = () => {
                 <div className="menu-btn">
                     <i className="fi fi-br-menu-burger"></i>
                 </div>
-                <h1 className='logo'>Chefcitos</h1>
+                <Link to="/">
+                    <h1 className='logo'>Chefcitos</h1>
+                </Link>
             </div>
 
             <div className="header-right">

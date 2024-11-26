@@ -31,7 +31,9 @@ const Navbar = () => {
       <div className='menu'>
         <i class="fi fi-br-menu-burger"></i>
       </div>
-      <div className='logo'>Chefcitos</div>
+      <Link to="/">
+        <div className='logo'>Chefcitos</div>
+      </Link>
 
       <div className="busqueda">
         <input className='buscar' type="text" placeholder={placeholders[placeholderIndex]}/>

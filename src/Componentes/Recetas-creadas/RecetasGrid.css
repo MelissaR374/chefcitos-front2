@@ -1,0 +1,73 @@
+.recetas-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    width: 85%;
+    padding-left: 80px;
+    padding-bottom: 50px;
+   /* Arriba | Derecha | Abajo | Izquierda */
+   margin: 0 100px 0 100px; 
+
+}
+  
+.recetas-card {
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 20px;
+    text-align: left;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3);
+    width: 85%;
+    transition: transform 0.3s ease;
+    
+}
+  
+.recetas-card-image {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+  
+.recipe-card-title {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #333;
+    text-align: center;
+}
+  
+.recipe-card-buttons {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    margin-left: 30px;
+
+
+}
+  
+.edit-button {
+    background-color: #3E5F41;
+    border: none;
+    color: white;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100px;
+}
+  
+.borrar-boton {
+    background-color: #d9534f;
+    border: none;
+    color: white;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100px;
+}
+  
+.edit-button:hover,
+.borrar-boton:hover {
+    opacity: 0.9;
+}
+  

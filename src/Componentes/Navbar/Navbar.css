@@ -7,6 +7,9 @@
   font-family: 'Poppins', sans-serif;
 }
 
+a{
+  text-decoration: none;
+}
 
 /* Estilo general del navbar */
 .navbar {
@@ -18,6 +21,7 @@
   width: 100%;     
   top: 0;
   z-index: 1000;     
+  text-decoration: none;
 }
 
 /*menu*/
@@ -36,6 +40,7 @@
   font-size: larger;
   display: flex;
   margin-left: -50px;
+  
 }
 
 /*busqueda en general*/
